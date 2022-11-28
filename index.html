@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Password Generator</title>
+</head>
+<body>
+    
+    <main>
+        <div class="container">
+            <h1>Password Generator</h1>
+            <div class="display">
+                <div class="password-generated"></div>
+                <img src="" alt="Copy" title="Copy to Clipboard">
+            </div>
+
+            <div class="password-details">
+                <div class="char-length">
+                    <label for="char-length">Character Length</label>
+                    <p class="count">0</p>
+                </div>
+                <input type="range" title="char-length" id="char-length-input">
+                <input type="checkbox" title="" id="input-lowercase">
+                <input type="checkbox" title="" id="input-uppercase">
+                <input type="checkbox" title="" id="input-numbers">
+                <input type="checkbox" title="" id="input-symbols">
+
+                <div class="strength">
+                    <h2>STRENGTH</h2>
+                    <div class="strength-box">
+                        <div class="bar-one"></div>
+                        <div class="bar-two"></div>
+                        <div class="bar-three"></div>
+                        <div class="bar-four"></div>
+                    </div>
+                </div>
+                <button type="button" title="Generate"> GENERATE <img src="" alt=""></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
