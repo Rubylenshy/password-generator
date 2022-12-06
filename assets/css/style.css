@@ -5,9 +5,11 @@
     --white: hsl(0, 0%, 100%);
     --green-400: hsl(152, 76%, 73%);
     --green-900: hsl(147, 60%, 58%);
+    --grey-200: rgb(78, 85, 78);
     --grey-400: rgb(39, 43, 39);
     --grey-900: rgb(27, 29, 27);
-    --padding: 15px 30px;
+    --padding: 15px 25px;
+    --green: #f0e222;
 }
 
 *{
@@ -16,36 +18,32 @@
     padding: 0;
     font-family: 'Space Mono', monospace;
 }
+input, button{
+    cursor: pointer;
+}
 .flex{
     display: flex;
 }
-input[type="checkbox"]:checked{
-    
-}
 input[type="range"]{
     width: 100%;
+    margin: 10px 0 15px;
 }
-input[type="range"]::-webkit-slider-thumb{
+
+/* input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background: #ff4500;
 }
-/* input[type=”range”]::-moz-range-thumb{
-
+input[type="range"]::-webkit-slider-thumb:hover{
+    background: var(--white);
 }
-input[type=”range”]::-ms-thumb{
-
-} */
 input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
     background-color: var(--grey-900);
+    height: 5px;
     border-radius: 5px;
-}
-/* input[type=”range”]::-moz-range-track{
-    
-}
-input[type=”range”]::-ms-track{
-
 } */
 
 
@@ -74,6 +72,7 @@ main{
     margin: 15px 0;
 }
 .password-generated{
+    color: var(--white);
     background: transparent;
     border: none;
     width: 80%;
@@ -86,11 +85,43 @@ main{
 } 
 .display img{
     height: 20px;
+    cursor: pointer;
 }
+.copied{
+    display: none;
+}
+/* .copied{
+    display: block;
+    position: absolute;
+    left: 80%;
+    bottom: 85%;
+    background: var(--green-400);
+    color: var(--grey-900);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: .60em;
+    visibility: hidden;
+}
+.copied::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 6px solid ;
+    border-color: var(--green-400) transparent transparent;
+} 
+.display img:focus .copied{
+    visibility: 1;
+}*/
 
 .password-details{
     color: var(--white);
     padding: 30px;
+}
+.check-boxes p{
+    font-size: 0.85em;
+    margin: 5px 0;
 }
 
 .char-length{
@@ -106,16 +137,17 @@ main{
     align-items: center;
     justify-content: space-between;
     background: var(--grey-900);
-    padding: 15px 25px;
+    padding: 15px 20px;
     margin: 20px 0;
 }
 .strength-box > div{
     border: 1px solid var(--white);
     height: 20px;
     width: 8px;
-    margin: 0 5px;
+    margin: 0 3px;
 }
 .strength h2{
+    color: var(--grey-200);
     font-size: 1.05em;
 }
 
@@ -131,4 +163,10 @@ main{
 }
 .generate-btn img{
     height: 15px;
+}
+
+@media (max-width: 400px) {
+    .container{
+        width: 95%;
+    }
 }
