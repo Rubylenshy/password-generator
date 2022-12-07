@@ -37,25 +37,46 @@ function genPassword() {
     // const strengthBox = document.querySelectorAll('.bar')
     
     // for (let i = 0; i < strengthBox.length; i++) {
-    //     if ( slider.value < 5) {
-    //         strengthBox[0].style.backgroundColor = '#bd4926'
-    //         strengthBox[i].style.borderColor = 'transparent'
-    //     }if ( slider.value <= 7) {
-    //         strengthBox[0].style.backgroundColor = '#f0e222'
-    //         strengthBox[1].style.backgroundColor = '#f0e222'
-    //         strengthBox[i].style.borderColor = 'transparent'
-    //     }else if(slider.value <= 9){
-    //         strengthBox[0].style.backgroundColor = '#3fbd26' 
-    //         strengthBox[1].style.backgroundColor = '#3fbd26' 
-    //         strengthBox[2].style.backgroundColor = '#3fbd26'
-    //         strengthBox[i].style.borderColor = 'transparent' 
+    //     function getBox(num){
+    //         return strengthBox[num].style.backgroundColor = '#3fbd26'
+    //     }
+    //     strengthBox[i].style.borderColor = 'transparent'
+    //     if ( slider.value <= 5) {
+    //         getBox(0)
+            
+    //     }if ( slider.value > 5 && slider.value <= 7) {
+    //         getBox(0); getBox(1)
+    //         strengthBox[2].style.backgroundColor = 'transparent'
+    //         strengthBox[3].style.backgroundColor = 'transparent'
+    //     }else if(slider.value > 7 && slider.value <= 9){
+    //         getBox(0); getBox(1); getBox(2)
+    //         strengthBox[3].style.backgroundColor = 'transparent'
     //     }
     //     else if(slider.value >= 10){
-    //         strengthBox[i].style.backgroundColor = '#3fbd26' 
-    //         strengthBox[i].style.borderColor = 'transparent' 
+    //         getBox(i) 
     //     }else{strengthBox[i].style.backgroundColor = 'transparent'}
     // }
-    
+
+    const strengthBox = document.querySelector('.strength-box')
+    function strength(word) {
+        strengthBox.innerHTML = `${word}`
+    }
+
+    if ( slider.value <= 5) {
+        strengthBox.innerHTML = `Weak`
+        strengthBox.style.color = `red`
+        
+    }if ( slider.value > 5 && slider.value <= 7) {
+        strengthBox.innerHTML = `Average`
+        strengthBox.style.color = `yellow`
+    }else if(slider.value > 7 && slider.value <= 9){
+        strengthBox.innerHTML = `Strong`
+        strengthBox.style.color = `green`
+    }
+    else if(slider.value >= 10){
+        strengthBox.innerHTML = `Rock Solid`
+        strengthBox.style.color = `green`
+    }
 
 }
 
