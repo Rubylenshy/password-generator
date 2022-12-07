@@ -58,10 +58,7 @@ function genPassword() {
     // }
 
     const strengthBox = document.querySelector('.strength-box')
-    function strength(word) {
-        strengthBox.innerHTML = `${word}`
-    }
-
+   
     if ( slider.value <= 5) {
         strengthBox.innerHTML = `Weak`
         strengthBox.style.color = `red`
@@ -84,5 +81,7 @@ function copyPassword() {
     passwordText.select();
     // passwordText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(passwordText.value); 
+    document.querySelector('.copied').style.opacity = `1`
+    setTimeout(function(){document.querySelector('.copied').style.opacity = `0`}, 2000)
+}
 
-  }

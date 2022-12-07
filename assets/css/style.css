@@ -88,36 +88,37 @@ main{
     cursor: pointer;
 }
 .copied{
-    display: none;
-}
-/* .copied{
-    display: block;
-    position: absolute;
-    left: 80%;
-    bottom: 85%;
+    width: 55px;
+    position: relative;
+    top: -20px;
+    left: 85%;
     background: var(--green-400);
     color: var(--grey-900);
     padding: 5px 10px;
     border-radius: 6px;
     font-size: .60em;
-    visibility: hidden;
+    opacity: 0;
 }
-.copied::after{
+.copied::before{
     content: '';
     position: absolute;
-    top: 100%;
+    top: -50%;
     left: 50%;
     margin-left: -5px;
     border: 6px solid ;
-    border-color: var(--green-400) transparent transparent;
+    border-color: transparent transparent var(--green-400);
 } 
-.display img:focus .copied{
-    visibility: 1;
-}*/
+.display img:hover{
+    transform: scale(105%);
+}
+.display img:active{
+    transform: scale(98%);
+}
 
 .password-details{
     color: var(--white);
     padding: 30px;
+    margin-top: -20px;
 }
 .check-boxes p{
     font-size: 0.85em;
